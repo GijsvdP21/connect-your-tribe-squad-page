@@ -8,7 +8,11 @@
     <!-- Hier komen de members -->
     <% squad.members.forEach(member => { %>
       <article>
-      <section class="members">
+      <section class="members" id="<%= member.slug %>"
+        <% if (member.colour) { %>
+          style="--favo-kleur: <%= member.colour.hex %>"
+          <% } %>
+      > 
         <h2 class="<%= member.name %>"><%= member.name %> <%= member.prefix %> <%= member.surname %></h2>
       <% if (member.avatar) { %>
         <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />

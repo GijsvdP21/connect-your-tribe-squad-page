@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg: hsl(var(--hue) 50% 50%);
+}
+
 .layout {
     display: flex;
     flex-direction: row;
@@ -22,6 +26,8 @@ article {
     margin-top: 15%;
     border: 2px solid black;
     box-shadow: 10px 10px #0000003d;
+    background-color: var(--favo-kleur, white);
+    color: black;
 }
 
 .members img {
@@ -34,3 +40,10 @@ article {
     font-size: 30px;
 }
 
+.members p {
+    margin: 1.5rem;
+}
+
+#krijn-hoetmer, #ivar-schuyt, #marwaxhello {
+    color: white;
+}
