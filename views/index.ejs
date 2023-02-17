@@ -15,7 +15,11 @@
         <% }else{ %>
           <img src="images/placeholder.jpg" alt="Placeholder avatar" />
           <% } %>
-          <p><%- member.bio %></p>
+            <% if (member.bio) { %>
+            <p><%= member.bio.html %></p>
+            <% }else{ %>
+              <p>Ik ben <%= member.name %> <%= member.prefix %> <%= member.surname %></p>
+              <% } %>
         </section>
         </article>
     <% }) %>
