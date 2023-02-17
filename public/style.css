@@ -2,8 +2,10 @@
     box-sizing: border-box;
 }
 
-:root {
-    --bg: hsl(var(--hue) 50% 50%);
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .layout {
@@ -24,10 +26,10 @@ article {
     flex-direction: column;
     align-items: center;
     margin-top: 15%;
-    border: 2px solid black;
-    box-shadow: 10px 10px #0000003d;
-    background-color: var(--favo-kleur, white);
-    color: black;
+    border: 2px solid var(--favo-kleur, black);
+    box-shadow: 10px 10px var(--favo-kleur, lightgrey);
+    background-color: white;
+    color: var(--favo-kleur);
 }
 
 .members img {
@@ -42,8 +44,9 @@ article {
 
 .members p {
     margin: 1.5rem;
+    font-size: 18px;
 }
 
-#krijn-hoetmer, #ivar-schuyt, #marwaxhello {
+/* #krijn-hoetmer, #ivar-schuyt, #marwaxhello {
     color: white;
-}
+} */
