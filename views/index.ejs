@@ -1,8 +1,9 @@
 <%- include('./partials/head.ejs') %>
 
-<%- include('./partials/header.ejs') %>
-
 <main>
+  <h1><%= squad.name %></h1>
+
+  <a href="/?squad=<%= squad.slug %>"><%= squad.name %></a>
   <section class="layout">
     <!-- Hier komen de members -->
     <% squad.members.forEach(member => { %>
