@@ -1,0 +1,25 @@
+<%- include('./partials/head.ejs') %>
+
+<main>
+  <h1><%= squad.name %></h1>
+
+  <a href="/?squad=<%= squad.slug %>"><%= squad.name %></a>
+  <section class="layout">
+    <!-- Hier komen de members -->
+    <% squad.members.forEach(member => { %>
+      <article>
+      <section class="members">
+        <h2 class="<%= member.name %>"><%= member.name %> <%= member.prefix %> <%= member.surname %></h2>
+      <% if (member.avatar) { %>
+        <img src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
+        <% }else{ %>
+          <img src="images/placeholder.jpg" alt="Placeholder avatar" />
+          <% } %>
+          <p><%- member.bio %></p>
+        </section>
+        </article>
+    <% }) %>
+  </section>
+</main>
+
+<%- include('./partials/foot.ejs') %>
