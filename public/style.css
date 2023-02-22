@@ -21,6 +21,10 @@ header {
     pointer-events: none; */
 }
 
+main {
+    margin-bottom: 1rem;
+}
+
 .layout {
     display: flex;
     flex-direction: row;
@@ -35,11 +39,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 5rem;
     border: 4px dashed var(--favo-kleur, black);
     background-color: white;
     color: var(--favo-kleur);
-    width: 20%;
+    width: 19rem;
     min-width: 18rem;
     border-radius: 10px;
     transition: .5s;
@@ -75,21 +79,25 @@ header {
     background-repeat: no-repeat;
     background-size: 100%;
     position: fixed;
-    height: 80vh;
-    height: 80svh;
-    width: 80vw;
-    width: 80svw;
+    height: 100%;
+    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-height: 67.5em;
-    min-width: 17.5em;
     z-index: 3;
     background-color: #fff;
     color: black;
     overflow: visible;
-    border-radius: 30px;
     border: none;
+}
+
+.card_sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    background: none;
 }
 
 /* #krijn-hoetmer, #ivar-schuyt, #marwaxhello {
