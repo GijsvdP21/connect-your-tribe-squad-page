@@ -1,0 +1,14 @@
+<header>
+  <h1><%= squad.name %></h1>
+    <ul>
+        <li> 
+            <a <% if (squad.name === 'Squad A') {%> class="active"<% } %>  href="/?squad=squad-a-2022">Squad A</a>
+        </li>
+        <li>
+            <a <% if (squad.name === 'Squad B') {%> class="active"<% } %>  href="/?squad=squad-b-2022">Squad B</a>
+        </li>
+        <li>
+            <a <% if (squad.name === 'Squat C') {%> class="active"<% } %>  href="/?squad=squat-c-2022">Squat C</a>
+        </li>
+    </ul>
+</header>

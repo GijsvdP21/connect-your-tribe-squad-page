@@ -1,11 +1,24 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    background-color: lightgray;
 }
 
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 2rem;
+    /* opacity: 0;
+    pointer-events: none; */
 }
 
 .layout {
@@ -16,30 +29,39 @@ body {
     gap: 5%;
 }
 
-article {
-    width: 20%;
-}
 
 .members {
+    position: relative;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 15%;
-    border: 2px solid var(--favo-kleur, black);
-    box-shadow: 10px 10px var(--favo-kleur, lightgrey);
+    margin-top: 5%;
+    border: 4px dashed var(--favo-kleur, black);
     background-color: white;
     color: var(--favo-kleur);
+    width: 20%;
+    min-width: 18rem;
+    border-radius: 10px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.members:hover {
+    box-shadow: 10px 10px var(--favo-kleur, black);
 }
 
 .members img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
     aspect-ratio: 1/1;
+    border-radius: 10px;
+    margin-bottom: 10%;
+    object-fit: cover;
 }
 
 .members h2 {
-    font-size: 30px;
+    font-size: 23px;
+    margin: 2rem;
+    background-color: white;
 }
 
 .members p {
@@ -50,3 +72,102 @@ article {
 /* #krijn-hoetmer, #ivar-schuyt, #marwaxhello {
     color: white;
 } */
+
+.card {
+    background-image: url(/images/background-cartoon.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 200;
+    flex-direction: column;
+    gap: 3rem;
+    /* opacity: 0;
+    pointer-events: none;
+    transition: 1s; */
+}
+
+.card div {
+    position: relative;
+    width: 35rem;
+    /* height: 20rem; */
+    background: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 16rem;
+}
+
+.modal_img {
+    width: 15rem;
+}
+
+ul {
+    margin-right: 8%;
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+}
+
+li a {
+    display: flex;
+    text-decoration: none;
+    width: 9rem;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    border-radius: 25px;
+    color: black;
+}
+
+.active {
+    background-color: #ff8800;
+    color: black;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    background-color: white;
+}
+
+h3 {
+    background-color: white;
+    font-size: 30px;
+}
+
+button {
+    position: relative;
+    /* bottom: 8rem; */
+    width: 7rem;
+    height: 2rem;
+    border-radius: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 1s;
+}
+
+.invisible {
+    height: 100%;
+    overflow: hidden;
+}

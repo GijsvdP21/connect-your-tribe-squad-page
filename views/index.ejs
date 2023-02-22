@@ -1,14 +1,12 @@
 <%- include('./partials/head.ejs') %>
 
-<main>
-  <h1><%= squad.name %></h1>
+<%- include('./partials/nav.ejs') %>
 
-  <a href="/?squad=<%= squad.slug %>"><%= squad.name %></a>
+<main>
   <section class="layout">
     <!-- Hier komen de members -->
     <% squad.members.forEach(member => { %>
-      <article>
-      <section class="members" id="<%= member.slug %>"
+      <section data-id="<%= member.id %>" class="members"
         <% if (member.colour) { %>
           style="--favo-kleur: <%= member.colour.hex %>"
           <% } %>
@@ -19,15 +17,39 @@
         <% }else{ %>
           <img src="images/placeholder.jpg" alt="Placeholder avatar" />
           <% } %>
-            <% if (member.bio) { %>
+            <!-- <% if (member.bio) { %>
             <p><%= member.bio.html %></p>
             <% }else{ %>
               <p>Ik ben <%= member.name %> <%= member.prefix %> <%= member.surname %></p>
-              <% } %>
+              <% } %> -->
         </section>
-        </article>
     <% }) %>
   </section>
+  <% squad.members.forEach(member => { %>
+
+
+  
+  <dialog id="<%= member.id %>" class="card">
+    <div>
+    <h3><%= member.name %> <br> <% if (member.prefix) {%> <%= member.prefix %> <br> <% } %> <%= member.surname %></h3>
+
+    <% if (member.avatar) { %>
+      <img class="modal_img" src="<%= member.avatar %>" alt="De avatar van <%= member.name %>" />
+      <% }else{ %>
+      <img class="modal_img" src="images/placeholder.jpg" alt="Placeholder avatar" />
+    <% } %>
+
+    <% if (member.bio) { %>
+      <p><%- member.bio.html %></p>
+      <% }else{ %>
+      <p>Ik ben <%= member.name %> <%= member.prefix %> <%= member.surname %></p>
+    <% } %>
+  </div>
+  <button class="close">
+    Close
+  </button>
+  </dialog>
+  <% }) %>
 </main>
 
 <%- include('./partials/foot.ejs') %>
