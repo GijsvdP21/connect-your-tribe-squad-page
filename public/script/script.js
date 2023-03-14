@@ -1,3 +1,5 @@
+// Openen van de pop-up/dialog
+
 const personas = document.querySelectorAll('.members')
 
 personas.forEach((persoon)=>{
@@ -18,7 +20,7 @@ personas.forEach((persoon)=>{
 })
 
 
-// Searchbar
+// Searchbar script
 
 const searchbar = document.querySelector('.searchbar')
 
@@ -32,7 +34,7 @@ function searching() {
 
     for (i = 0; i < x.length; i++) {
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
-            x[i].style.display = 'none';            
+            x[i].style.display = 'none';
         }
         else {
             x[i].style.display = 'flex';

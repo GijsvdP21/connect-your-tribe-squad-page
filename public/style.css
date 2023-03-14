@@ -10,6 +10,8 @@ body {
     align-items: center;
 }
 
+
+    /* Navigatie styling */
 header {
     display: flex;
     flex-direction: column;
@@ -17,10 +19,42 @@ header {
     justify-content: center;
     gap: 1rem;
     padding-top: 2rem;
-    /* opacity: 0;
-    pointer-events: none; */
 }
 
+ul {
+    margin-right: 8%;
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+}
+
+li a {
+    display: flex;
+    text-decoration: none;
+    width: 9rem;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    border-radius: 25px;
+    color: black;
+}
+
+.active {
+    background-color: #ff8800;
+    color: black;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+
+    /* landings page styling */
+    
 main {
     margin-bottom: 1rem;
 }
@@ -33,6 +67,8 @@ main {
     gap: 5%;
 }
 
+
+    /* kaartjes */
 
 .members {
     position: relative;
@@ -74,6 +110,9 @@ main {
     font-size: 18px;
 }
 
+
+    /* Pop-up venster */
+
 .card {
     background-image: url(/images/background-cartoon.png);
     background-repeat: no-repeat;
@@ -100,33 +139,9 @@ main {
     background: none;
 }
 
-/* #krijn-hoetmer, #ivar-schuyt, #marwaxhello {
-    color: white;
-} */
-
-/* .card {
-    background-image: url(/images/background-cartoon.png);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    z-index: 200;
-    flex-direction: column;
-    gap: 3rem;
-    opacity: 0;
-    pointer-events: none;
-    transition: 1s;
-} */
-
 .card div {
     position: relative;
     width: 35rem;
-    /* height: 20rem; */
     background: none;
     display: flex;
     flex-direction: row;
@@ -140,37 +155,6 @@ main {
     width: 14rem;
 }
 
-ul {
-    margin-right: 8%;
-    display: flex;
-    flex-direction: row;
-    gap: 20%;
-    justify-content: center;
-    list-style: none;
-    align-items: center;
-}
-
-li a {
-    display: flex;
-    text-decoration: none;
-    width: 9rem;
-    background-color: white;
-    align-items: center;
-    justify-content: center;
-    height: 3rem;
-    border-radius: 25px;
-    color: black;
-}
-
-.active {
-    background-color: #ff8800;
-    color: black;
-}
-
-h1 {
-    font-size: 50px;
-}
-
 p {
     background-color: white;
 }
@@ -182,7 +166,6 @@ h3 {
 
 button {
     position: relative;
-    /* bottom: 8rem; */
     width: 7rem;
     height: 2rem;
     border-radius: 20px;

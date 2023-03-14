@@ -1,3 +1,4 @@
+<!-- Pop-up voor ieder persoon in de Who-is API -->
 <% squad.members.forEach(member => { %>
     <dialog id="<%= member.id %>" class="card">
       <section class="card_sec">
@@ -10,12 +11,15 @@
             <img class="modal_img" src="images/placeholder.jpg" alt="Placeholder avatar" />
           <% } %>
   
+          <!-- persoonlijke bio, werkt niet zonder if functie -->
           <% if (member.bio) { %>
             <p><%- member.bio.html %></p>
+            <!-- als er geen bio is -->
             <% }else{ %>
             <p>Ik ben <%= member.name %> <%= member.prefix %> <%= member.surname %></p>
           <% } %>
         </div>
+        <!-- sluit knop -->
         <button class="close">
           Close
         </button>
