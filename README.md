@@ -20,6 +20,15 @@
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 
+### Node
+Node is een omgeving waarin je client-side aan je website kan bouwen.
+
+### Express
+Express JS is een handige framework om meerdere pagina's op een website meet bouwen.
+
+### ejs
+ejs is een eenvoudige taal, waarmee je HTML kan schrijven met behulp van wat JavaScript.
+
 ## Installatie
 <!-- Bij Installatie staat stap-voor-stap beschreven hoe je de development omgeving moet inrichten om aan de repository te kunnen werken. -->
 
